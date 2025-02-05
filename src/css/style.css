@@ -1,0 +1,92 @@
+/*Fonte roboto - google*/
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+/*Centralizar */
+.center-text{
+    text-align: center;
+}
+.center-div{
+    margin: auto;
+    text-align: center;
+}
+.centralizar-div{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Imagens*/
+.fluid-img{
+    max-width: 100% ;
+    height: auto !important;
+}
+
+.pic{
+    border-radius: 50%;
+}
+
+/*Main*/
+.main{
+    max-height: 50%;
+    background-color: red;
+}
+
+/*MENU HAMBURGUER*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    color: white;
+}
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.menu a:hover {
+    background: #575757;
+}
+#menu-toggle:checked + .menu {
+    display: block;
+}
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        position: static;
+        background: none;
+        padding: 0;
+    }
+    .menu a {
+        padding: 10px 20px;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+/**/
