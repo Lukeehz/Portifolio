@@ -93,4 +93,28 @@
         display: none;
     }
 }
-/**/
+/*Distanciamento*/
+.pt{
+    padding-top: 5%;
+}
+
+
+/*Formatação letra*/
+.cwhite{
+    color: white;
+}
+.negrito{
+    font-weight: bold;
+}
+
+/*Animação*/
+
+#texto::after{
+    content: "|";
+    color: white;
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

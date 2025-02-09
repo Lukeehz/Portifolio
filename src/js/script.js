@@ -1,20 +1,23 @@
-//Efeito digitação
-function typeEffect(element, text, speed) {
-    let index = 0;
-    function type() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, speed);
-        } else {
-            element.classList.remove("typing");
-        }
+const texto = `Prazer, me chamo Lucas 👋`;
+const VelEscrita = 100;
+let i = 0;
+
+function escrever() {
+    if (i <= texto.length) {
+        document.getElementById("texto").innerHTML = texto.substring(0, i);
+        i++;
+        setTimeout(escrever, VelEscrita);
     }
-    element.classList.add("typing");
-    type();
+    else{
+        piscarCursor()
+    }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const h3 = document.getElementById("typing-text");
-    typeEffect(h3, "Prazer, me chamo Lucas", 100);
-});
+function piscarCursor() {
+    setInterval(() => {
+        mostrarCursor = !mostrarCursor;
+        document.getElementById("texto").innerHTML = texto + (mostrarCursor ? "_" : "");
+    }, 500);
+}
+
+escrever();
