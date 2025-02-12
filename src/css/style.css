@@ -10,6 +10,12 @@
     font-variation-settings:
       "wdth" 100;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 
 /*Centralizar */
 .center-text{
@@ -38,11 +44,25 @@
     padding-right: 10px;
     padding-left: 10px;
 }
-/*Main*/
+/*Main e section*/
 .main{
     height: 100vh;
     max-height: 100vh;
     background-color: black;
+}
+.secBranco{
+    height: 100vh;
+    max-height: 100vh;
+    background-color: white;
+}
+.secEmail{
+    height:20vh;
+    max-height: 20vh;
+    background-color: gray;
+}
+.header{
+    height:5vh;
+    max-height: 5vh;
 }
 
 /*MENU HAMBURGUER*/
@@ -54,10 +74,12 @@
     padding: 10px 20px;
     color: white;
 }
+
 .menu-toggle {
     font-size: 24px;
     cursor: pointer;
 }
+
 .menu {
     display: none;
     position: absolute;
@@ -67,18 +89,22 @@
     padding: 10px;
     border-radius: 5px;
 }
+
 .menu a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 10px;
 }
+
 .menu a:hover {
     background: #575757;
 }
+
 #menu-toggle:checked + .menu {
     display: block;
 }
+
 @media (min-width: 768px) {
     .menu {
         display: flex;
@@ -86,9 +112,11 @@
         background: none;
         padding: 0;
     }
+
     .menu a {
         padding: 10px 20px;
     }
+
     .menu-toggle {
         display: none;
     }
@@ -103,6 +131,7 @@
 .cwhite{
     color: white;
 }
+
 .negrito{
     font-weight: bold;
 }
@@ -117,4 +146,11 @@
 
 @keyframes blink {
     50% { border-color: transparent; }
+}
+
+textarea{
+    width: 500px;
+    height: 100px;
+    resize: none;
+    overflow: auto; 
 }
