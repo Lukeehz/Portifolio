@@ -1,14 +1,32 @@
 //API
+const reposContainer = document.querySelector("#repos");
 
 function gitApi() {
   fetch("/github")
     .then((res) => res.json())
     .then((git) => {
-      console.log(git);
-    });
+      reposContainer.innerHTML = ""; 
+
+      git.forEach((repoName) => {
+        const div = document.createElement("div");
+        div.classList.add("repo-card"); 
+
+        const a = document.createElement("a");
+        a.href = `https://github.com/Lukeehz/${repoName}`;
+        a.target = "_blank";
+        a.textContent = repoName;
+        a.classList.add("repo-link"); 
+
+        div.appendChild(a);
+        reposContainer.appendChild(div);
+      });
+    })
+    .catch((err) => console.error(err));
 }
 
 gitApi();
+
+
 
 /* ANIMACOES */
 
