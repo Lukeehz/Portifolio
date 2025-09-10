@@ -21,6 +21,54 @@
   height: 100vh;
 }
 
+.bg-white50 {
+  background-color: white;
+  color: black;
+  height: 50vh;
+}
+
+.bg-white25 {
+  background-color: white;
+  color: black;
+  height: 25vh;
+}
+
+.bg-white75 {
+  background-color: white;
+  color: black;
+  height: 75vh;
+}
+
+.bg-black50 {
+  background-color: black;
+  color: white;
+  height: 50vh;
+}
+
+.bg-gray{
+  background-color: #474747;
+  color: #fff;
+  height: 100vh;
+}
+
+.bg-gray50{
+  background-color: #474747;
+  color: #fff;
+  height: 50vh;
+}
+
+.bg-gray25{
+  background-color: #474747;
+  color: #fff;
+  height: 25vh;
+}
+
+.bg-gray75{
+  background-color: #474747;
+  color: #fff;
+  height: 75vh;
+}
+
 footer {
   height: 50vh;
   background-color: #0a1f44;
@@ -75,6 +123,11 @@ footer {
 }
 
 /* BORDAS */
+.border-baixo{
+  border-bottom: 1px solid black !important;
+  width: 50%;
+  margin: 0 auto;
+}
 
 .border-round {
   border-radius: 50px !important;
@@ -97,6 +150,24 @@ footer {
 
 .text-center {
   text-align: center !important;
+}
+
+/* Textos*/
+
+.pBio{
+  font-size: 1.3rem;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width:768px){
+  .pBio{
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 /* DIMENSIONAMENTO */
