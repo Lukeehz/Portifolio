@@ -15,7 +15,7 @@ function gitApi() {
         a.href = `https://github.com/Lukeehz/${repoName}`;
         a.target = "_blank";
         a.textContent = repoName;
-        a.classList.add("repo-link"); 
+        a.classList.add("repo-link", "fontPixel"); 
 
         div.appendChild(a);
         reposContainer.appendChild(div);

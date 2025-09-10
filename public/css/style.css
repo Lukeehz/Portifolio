@@ -69,9 +69,91 @@
   height: 75vh;
 }
 
+/* Section Skills */
+/* SEÇÃO SKILLS */
+.skills-section {
+  background-color: #ffffff25;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center; /* centraliza textos dentro da seção */
+}
+
+.skills-title {
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* LISTA DE SKILLS */
+.skills-list {
+  list-style: none;
+  display: flex;          /* muda para flex para centralizar melhor */
+  flex-wrap: wrap;        /* quebra linha automaticamente */
+  justify-content: center; /* centraliza horizontalmente os itens */
+  gap: 1rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0a1f44;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  background-color: #1db954;
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .skill-item {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .skill-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list {
+    gap: 0.5rem;
+  }
+  .skill-item {
+    font-size: 0.55rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .skill-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
 /* footer */
 
-/* FOOTER COMPACTO */
 footer {
   background-color: #0a1f44;
   color: #fff;
@@ -83,7 +165,6 @@ footer {
   font-family: "Press Start 2P", monospace;
 }
 
-/* FORMULÁRIO */
 footer form {
   display: flex;
   flex-direction: column;
@@ -138,7 +219,6 @@ footer button:hover {
   transform: scale(1.05);
 }
 
-/* INFORMAÇÕES ABAIXO DO FORM */
 footer .footer-info {
   display: flex;
   flex-direction: column;
@@ -157,7 +237,6 @@ footer .footer-info a:hover {
   color: #00acee;
 }
 
-/* RESPONSIVO */
 @media (max-width: 600px) {
   footer {
     padding: 2rem 1rem;

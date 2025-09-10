@@ -13,11 +13,10 @@
   <body>
     <section class="bg-black">
       <div class="" style="text-align: end; margin-right: 1rem">
-        <img src="/image/br.png" class="btnImg" style="width: 2.5%" alt="" />
-
         <img
-          src="/image/us.png"
-          class="ms-2 btnImg"
+          id="language"
+          src="/image/br.png"
+          class="btnImg"
           style="width: 2.5%"
           alt=""
         />
@@ -33,7 +32,9 @@
           />
         </div>
 
-        <h3 class="text-center fontPixel pt-5">Técnologias mais usadas</h3>
+        <h3 class="text-center fontPixel pt-5" id="tech">
+          Técnologias mais usadas
+        </h3>
 
         <div class="img-row pt-5">
           <img
@@ -91,8 +92,10 @@
       <section class="bg-white25">
         <div class="m-5">
           <article class="">
-            <h2 class="text-center fontPixel pt-2 border-baixo">SOBRE MIM</h2>
-            <p class="pBio">
+            <h2 id="bioTitle" class="text-center fontPixel pt-2 border-baixo">
+              SOBRE MIM
+            </h2>
+            <p id="bio" class="pBio">
               Meu nome é Lucas, atualmente possuo 23 anos e sou estudante da
               área da ciência da computação. Sou apaixonado por tecnologia e
               estou sempre em busca de aprender novas ferramentas e tecnologias.
@@ -107,15 +110,116 @@
 
       <section class="bg-white75">
         <div class="m-5">
-          <h2 class="text-center fontPixel pt-2 border-baixo">PROJETOS</h2>
+          <h2 id="projectTitle" class="text-center fontPixel pt-2 border-baixo">
+            PROJETOS
+          </h2>
           <div id="repos"></div>
         </div>
       </section>
     </div>
 
+    <section class="skills-section">
+      <div class="skills-container m-5">
+        <h2 id="skillsTitle" class="skills-title fontPixel border-baixo">
+          Habilidades
+        </h2>
+        <ul class="skills-list pt-5">
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+            />
+            HTML
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+            />
+            CSS
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JS"
+            />
+            JavaScript
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TS"
+            />
+            TypeScript
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap"
+            />
+            Bootstrap
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="ReactJS"
+            />
+            ReactJS
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="NodeJS"
+            />
+            NodeJS
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+              alt="C#"
+            />
+            C# .NET
+          </li>
+          <li class="skill-item">
+            <img
+              id="NoSQL"
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="NoSQL"
+            />NoSQL
+          </li>
+          <li class="skill-item">
+            <img
+              id="SQL"
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="SQL"
+            />
+            SQL
+          </li>
+          <li class="skill-item">
+            <img
+              class="skill-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+            />
+            Git/Github
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <footer>
       <form action="/nodemailer" method="post">
-        <label for="email">Seu e-mail:</label>
+        <label id="YourEmail" for="email">e-mail:</label>
         <input
           type="text"
           id="email"
@@ -124,7 +228,7 @@
           placeholder="Digite seu E-Mail"
         />
 
-        <label for="subject">Assunto:</label>
+        <label id="YourSubject" for="subject">Assunto:</label>
         <input
           type="text"
           id="subject"
@@ -133,18 +237,27 @@
           placeholder="Digite o assunto"
         />
 
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" />
+        <label id="YourName" for="name">Nome:</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Digite seu nome"
+          id="name"
+        />
 
-        <label for="msg">Mensagem:</label>
-        <textarea name="msg" id="msg"></textarea>
+        <label id="YourMsg" for="msg">Mensagem:</label>
+        <textarea
+          name="msg"
+          placeholder="Digite sua mensagem"
+          id="msg"
+        ></textarea>
 
-        <button type="submit">Enviar</button>
+        <button id="sBtn" type="submit">Enviar</button>
       </form>
 
       <div class="footer-info">
-        <span>© 2025 Lucas Pires</span>
-        <span>Desenvolvedor Full Stack | Brasil</span>
+        <span>© 2025 Lukeehz</span>
+        <span id="job">Desenvolvedor Full Stack | Brasil</span>
         <span>
           Redes:
           <a href="#">GitHub</a> | <a href="#">LinkedIn</a> |
@@ -154,4 +267,5 @@
     </footer>
   </body>
   <script src="/js/script.js"></script>
+  <script src="/js/translate.js"></script>
 </html>
