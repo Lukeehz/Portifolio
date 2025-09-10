@@ -11,7 +11,6 @@
     <title>Portifólio</title>
   </head>
   <body>
-
     <section class="bg-black">
       <div class="" style="text-align: end; margin-right: 1rem">
         <img src="/image/br.png" class="btnImg" style="width: 2.5%" alt="" />
@@ -115,7 +114,43 @@
     </div>
 
     <footer>
-      <div></div>
+      <form action="/nodemailer" method="post">
+        <label for="email">Seu e-mail:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          required
+          placeholder="Digite seu E-Mail"
+        />
+
+        <label for="subject">Assunto:</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          placeholder="Digite o assunto"
+        />
+
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="msg">Mensagem:</label>
+        <textarea name="msg" id="msg"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="footer-info">
+        <span>© 2025 Lucas Pires</span>
+        <span>Desenvolvedor Full Stack | Brasil</span>
+        <span>
+          Redes:
+          <a href="#">GitHub</a> | <a href="#">LinkedIn</a> |
+          <a href="#">Twitter</a> | <a href="#">Instagram</a> |
+        </span>
+      </div>
     </footer>
   </body>
   <script src="/js/script.js"></script>
