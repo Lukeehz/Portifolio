@@ -15,8 +15,6 @@ app.use(express.json());
 
 app.use("/", portifolio)
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
-});
-
 console.log("Tudo ok")
+
+module.exports = app
